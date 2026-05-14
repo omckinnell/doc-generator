@@ -1,10 +1,8 @@
-from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from parser import parser
-
-
-load_dotenv()
+import streamlit as st
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
